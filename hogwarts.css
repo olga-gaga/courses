@@ -1,6 +1,6 @@
 header img {
 	width: 100%;
-	height: 150px;
+	height: 170px;
 }
 body{
 	font-size: 1.5em;
@@ -10,18 +10,24 @@ body{
 
 nav {
 	width: 99%;
-	margin:1%;
+	margin:0;
 }
+
+.menu ul  {
+	padding:0;
+}
+
 .menu li {
   display: inline-block;
   border-bottom: 3px solid #994ecb;
   font-size: 1.4em;
   text-align: center;
-  width: 19%;
+  width: 18%;
   margin-right:10px;
+  cursor: pointer;
 }
 .menu li:hover {
-  background: #af5be8;
+  background:#d196f8;
 }
 .menu li a {
   display: block;
@@ -35,47 +41,88 @@ nav {
 	display: none;
 }
 
-.teachers div{
+.teachers-page div{
 	display: flex;
-
 }
 
 h1, h2, h3{
 	text-align: center;
+	color: #7128a2;
+
 }
 
-.teachers article {
+#owl {
+	height:200px;
+	width:348px;
+	float:left;
+	margin: 1%;
+}
+
+#broom {
+	float: right;
+	margin: 1%;
+	height:400px;
+	width:400px;
+}
+
+.history-page img{
+	margin: 1%;
+	width:450px;
+	height:337px;
+}
+
+#founders {
+	float:right;
+}
+
+#hogwarts-castle {
+	float: left;
+
+}
+
+.history-page figcaption {
+	font-size: 0.6em;
+	text-align: center;
+}
+
+.teachers-page article {
 	vertical-align: middle;
 }
 
-.teachers div img, .students figure img {
+.teachers-page div img {
 	height: 213px;
-	width: 150px;
+	width: 150px;		
 	margin-right:10px;
 }
 
-.teachers div img {
+ .student-page figure img {
+	height: 213px;
+	width: 160px;
+ }
+
+.teachers-page div img {
 	margin-right: 3%;
 	margin-left:3%;
 }
 
-.students h2{
+.student-page h2{
 	background: #d196f8;
+	color: black;
 	margin: 10px;
 	text-align: center;
 }
 
-.students div {
+.student-page div {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.students figcaption {
+.student-page figcaption {
 	text-align: center;
 	width: 150px;
 }
 
-.subjects p {
+.subjects-page p {
 	border-bottom: 3px solid #d196f8;
 	width:40%;
 	margin: 10px;
@@ -84,47 +131,31 @@ h1, h2, h3{
 }
 
 
-.subjects ul{
+.subjects-page ul{
 	list-style-type: square;
+	font-size: 0.9em;
 }
-@media print {
-	body {
-		font-family: "Times New Roman", serif;
-		font-size: 20pt;
-		width: 100%;
-		margin: 1cm 0.8cm 1cm 1.5cm;
-	}
-	h1{
-		font-size: 1.2em;
-		margin:0;
-	}
-	h2{
-		font-size: 1.1em;
-		margin: 0;
-	}
-	article, ul {
-		white-space:pre-line;
-	}
-	
-	title, #video_trailer, video, header, figure, #screenshots{
-        display: none;
-    }
-	
-	nav {
-		margin:0;
-	}
 
-    ul>li a{
-    	text-decoration: none;
-    }
-  	ul>li a:after {
-    	content: "( "attr(href)" )";
-    }
-    figure {
-    	width: 100%;
-    }
-    figure .img1, figure .img2 {
-    	width: 100%;
-    	height: auto;
-    }
+.subjects-page ul li{
+	list-style-type: none;
+}
+
+.subjects-page ul li:before{
+	color: #9e66c3;
+	content: "•";
+}
+
+footer {
+	height:100px;
+	width:100%;
+	padding-top:4%;
+	background-color:#c978ff;
+	font-size:1.3em;
+	text-align: center;
+}
+footer a{
+	color:#270041;
+}
+footer a:visited{
+	color:#4a3558;
 }
