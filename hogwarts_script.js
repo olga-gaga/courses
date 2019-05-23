@@ -7,23 +7,20 @@ for(item of menu) {
 function openMenuElements(e) {
 	let dataMenu,selecEl, childEl;
 	for(item of menu) {
-		/*dataMenu = item.getAttribute("data-menu");
-		selecEl = "div[data-menu=\"" + dataMenu +"\"]";
-		childEl = document.querySelector(selecEl);
+		dataMenu = item.getAttribute("data-menu");
+		childEl = document.getElementsByClassName(dataMenu)[0];
 		if (!childEl.classList.contains("close")) {
 			childEl.classList.add("close");
-		}*/
-		item.classList.add("close");
+		}
 	}
 	let elementName = this.getAttribute("data-menu");
-	let selectorEl = "div[data-menu=\"" + elementName +"\"]";
-	//console.log(document.querySelectorAll(selectorEl));
-	let openElement = document.querySelector(selectorEl);
+	
+	let openElement = document.getElementsByClassName(elementName)[0];
 	openElement.classList.toggle("close");
 
 }
 
-let pTags = document.querySelectorAll(".subjects p");
+let pTags = document.querySelectorAll(".subjects-page p");
 
 for( item of pTags) {
 	item.onclick = openClose;
@@ -33,5 +30,15 @@ function openClose(e) {
 		if (e.target.nextElementSibling.nodeName === "UL") {
 			this.nextElementSibling.classList.toggle("close");
 		}
+}
+
+let housesTags = document.querySelectorAll(".student-page h2");
+
+for( item of housesTags) {
+	item.onclick = openHouse;
+}
+
+function openHouse(e) {
+		this.nextElementSibling.classList.toggle("close");
 }
 
