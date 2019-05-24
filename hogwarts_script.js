@@ -27,9 +27,7 @@ for( item of pTags) {
 }
 
 function openClose(e) {
-		if (e.target.nextElementSibling.nodeName === "UL") {
-			this.nextElementSibling.classList.toggle("close");
-		}
+	this.nextElementSibling.classList.toggle("close");
 }
 
 let housesTags = document.querySelectorAll(".student-page h2");
@@ -41,4 +39,3 @@ for( item of housesTags) {
 function openHouse(e) {
 		this.nextElementSibling.classList.toggle("close");
 }
-
